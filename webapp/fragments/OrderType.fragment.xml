@@ -1,0 +1,12 @@
+<core:FragmentDefinition id="ordertypefragment" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+<SelectDialog
+        id="valueHelpSelectDialog"
+		title="{i18n>order_type}"
+		class="sapUiPopupWithPadding"
+		items="{/ValueHelpSet}"
+		confirm="_handleValueHelpClose"
+		cancel="_handleValueHelpClose">
+		<StandardListItem
+			title="{Value}"/>
+	</SelectDialog>
+</core:FragmentDefinition>

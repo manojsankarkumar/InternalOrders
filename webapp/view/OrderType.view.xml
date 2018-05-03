@@ -1,0 +1,49 @@
+<mvc:View controllerName="InternalOrders.controller.OrderType" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" 
+   xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<FlexBox
+					height="100px"
+					alignItems="Start"
+					justifyContent="Center">
+					<items>
+						<VBox class="sapUiSmallMargin">
+		<f:SimpleForm id="OrderTypeForm"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="2"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="3"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="{i18n>order_type}" />
+				<Input id="AUART" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
+			     <suggestionItems>
+					<core:ListItem key="{}" text="{}" additionalText="{}"/>
+				</suggestionItems>
+				<layoutData>
+							<l:GridData span="L5 M5 S5"/>
+						</layoutData>
+			        </Input>
+			       <Button text="{i18n>master_data}" press="onMasterData"/>
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+		</items>
+				</FlexBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

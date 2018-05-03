@@ -1,0 +1,15 @@
+<core:FragmentDefinition id= "valuehelpfragment" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+<SelectDialog
+        id = "SelectDialog"
+		title="{}"
+		class="sapUiPopupWithPadding"
+		items="{/ValueHelpSet}"
+		confirm="_handleValueHelpClose"
+		cancel="_handleValueHelpClose">
+		<StandardListItem
+			title="{Value}"/>
+	</SelectDialog>
+</core:FragmentDefinition>
+
+<!--path: 'InternalOrders>Input',-->
+<!--				formatter: '.formatter.getValueHelpTitle'-->
