@@ -21,7 +21,7 @@ sap.ui.define([
 
 			oHistory = History.getInstance();
 			sPreviousHash = oHistory.getPreviousHash();
-var oRouter = this.getRouter();
+             var oRouter = this.getRouter();
 			if (sPreviousHash !== undefined) {
 				window.history.go(-1);
 			} else {

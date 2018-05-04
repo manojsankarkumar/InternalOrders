@@ -39,9 +39,24 @@ sap.ui.define([], function () {
 					return resourceBundle.getText("proce_grp");
 			    case "IVPRO":
 					return resourceBundle.getText("invest_profile");
-				// case "":
-				// 	return resourceBundle.getText("");
-					
+				case "REQCOD":
+					return resourceBundle.getText("request_code");
+				case "REQCCTR":
+					return resourceBundle.getText("request_cctr");
+				case "ACTPOSCCTR":
+					return resourceBundle.getText("act_post_cctr");
+				case "COSTCENTER":
+					return resourceBundle.getText("cost_center");
+				case "SIZECL":
+					return resourceBundle.getText("scale");
+				case "IZWEK":
+					return resourceBundle.getText("invest_reason");
+				case "UMWKZ":
+					return resourceBundle.getText("env_invest");
+				case "PRNAM":
+					return resourceBundle.getText("invest_prog");
+				case "ANLKL":
+					return resourceBundle.getText("asset_class");
 				default:
 					return sInput;
 			}
