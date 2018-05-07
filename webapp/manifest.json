@@ -98,21 +98,12 @@
 				"pattern": "",
 				"name": "OrderType",
 				"target": "ordertype"
-			}, {
-				"pattern": "createinternalorder",
-				"name": "CreateInternalOrder",
-				"target": "createinternalorder"
 			}],
 			"targets": {
 				"ordertype": {
 					"viewId": "ordertype",
 					"viewName": "OrderType",
 					"viewLevel": 1
-				},
-				"createinternalorder": {
-					"viewId": "createinternalorder",
-					"viewName": "CreateInternalOrder",
-					"viewLevel": 2
 				}
 			}
 		}

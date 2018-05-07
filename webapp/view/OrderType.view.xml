@@ -1,10 +1,10 @@
-<mvc:View controllerName="InternalOrders.controller.OrderType" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" 
-   xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
-		<App>
+<mvc:View controllerName="InternalOrders.controller.OrderType" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<App>
 		<pages>
 			<Page title="{i18n>create_title}">
 				<content>
-					<VBox  class="sapUiSmallMargin">
+					<VBox class="sapUiSmallMargin">
 						<f:SimpleForm id="MasterDataForm" editable="true" layout="ResponsiveGridLayout" labelSpanXL="2" labelSpanL="2" labelSpanS="3"
 							adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
 							singleContainerFullSize="false">
@@ -16,7 +16,8 @@
 									</layoutData>
 								</Input>
 								<Label text="{i18n>order_type}"/>
-								<Input id="AUART" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp" valueLiveUpdate="true" liveChange="orderTypeUpdate" >
+								<Input id="AUART" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp" valueLiveUpdate="true"
+									liveChange="orderTypeUpdate">
 									<layoutData>
 										<l:GridData span="L4 M5 S10"/>
 									</layoutData>
@@ -59,6 +60,16 @@
 												<l:GridData span="L4 M5 S10"/>
 											</layoutData>
 										</Input>
+										<Label text="{i18n>object_class}" required="true"/>
+										<Select forceSelection="false" selectedKey="{overhead}">
+											<core:Item key="{invest}" text="Investment"/>
+											<core:Item key="{overhead}" text="Overhead"/>
+											<core:Item key="{profit}" text="Profit Analysis"/>
+											<core:Item key="{production}" text="Production"/>
+											<layoutData>
+										      <l:GridData span="L4 M5 S10"/>
+									        </layoutData>
+										</Select>
 										<Label text="{i18n>profit_center}" required="true"/>
 										<Input id="PRCTR" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 											<suggestionItems>
