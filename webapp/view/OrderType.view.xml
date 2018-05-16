@@ -10,7 +10,7 @@
 							singleContainerFullSize="false">
 							<f:content>
 								<Label text="{i18n>order}"/>
-								<Input id="name" value="{}">
+								<Input id="name" value="">
 									<layoutData>
 										<l:GridData span="L4 M5 S10"/>
 									</layoutData>
@@ -23,7 +23,7 @@
 									</layoutData>
 								</Input>
 								<Label text="{i18n>description}"/>
-								<Input id="description" value="{}"/>
+								<Input id="AUFTEXT" value=""/>
 							</f:content>
 						</f:SimpleForm>
 					</VBox>
@@ -42,7 +42,7 @@
 												<l:GridData span="L4 M5 S10"/>
 											</layoutData>
 										</Input>
-										<Label text="{i18n>business_area}" required="true"/>
+										<Label text="{i18n>business_area}"/>
 										<Input id="GSBER" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 											<suggestionItems>
 												<core:ListItem key="{ProductId}" text="{Name}" additionalText="{ProductId}"/>
@@ -60,7 +60,7 @@
 												<l:GridData span="L4 M5 S10"/>
 											</layoutData>
 										</Input>
-										<Label text="{i18n>object_class}" required="true"/>
+										<Label text="{i18n>object_class}"/>
 										<Select forceSelection="false" selectedKey="{overhead}">
 											<core:Item key="{invest}" text="Investment"/>
 											<core:Item key="{overhead}" text="Overhead"/>
@@ -70,7 +70,7 @@
 										      <l:GridData span="L4 M5 S10"/>
 									        </layoutData>
 										</Select>
-										<Label text="{i18n>profit_center}" required="true"/>
+										<Label text="{i18n>profit_center}"/>
 										<Input id="PRCTR" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 											<suggestionItems>
 												<core:ListItem key="{ProductId}" text="{Name}" additionalText="{ProductId}"/>
@@ -79,7 +79,7 @@
 												<l:GridData span="L4 M5 S10"/>
 											</layoutData>
 										</Input>
-										<Label text="{i18n>responsible_cctr}" required="true"/>
+										<Label text="{i18n>responsible_cctr}"/>
 										<Input id="KOSTL" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 											<suggestionItems>
 												<core:ListItem key="{ProductId}" text="{Name}" additionalText="{ProductId}"/>
@@ -88,7 +88,7 @@
 												<l:GridData span="L4 M5 S10"/>
 											</layoutData>
 										</Input>
-										<Label text="{i18n>user_resp}" required="true"/>
+										<Label text="{i18n>user_resp}"/>
 										<Input id="BNAME" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 											<suggestionItems>
 												<core:ListItem key="{ProductId}" text="{Name}" additionalText="{ProductId}"/>
@@ -97,7 +97,7 @@
 												<l:GridData span="L4 M5 S10"/>
 											</layoutData>
 										</Input>
-										<Label text="{i18n>wbs}" required="true"/>
+										<Label text="{i18n>wbs}"/>
 										<Input id="PSPNR" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 											<suggestionItems>
 												<core:ListItem key="{ProductId}" text="{Name}" additionalText="{ProductId}"/>
@@ -106,7 +106,7 @@
 												<l:GridData span="L4 M5 S10"/>
 											</layoutData>
 										</Input>
-										<Label text="{i18n>request_cctr}" required="true"/>
+										<Label text="{i18n>request_cctr}"/>
 										<Input id="REQUESTCCTR" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 											<suggestionItems>
 												<core:ListItem key="{ProductId}" text="{Name}" additionalText="{ProductId}"/>
@@ -115,7 +115,7 @@
 												<l:GridData span="L4 M5 S10"/>
 											</layoutData>
 										</Input>
-										<Label text="{i18n>request_code}" required="true"/>
+										<Label text="{i18n>request_code}"/>
 										<Input id="REQCOD" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 											<suggestionItems>
 												<core:ListItem key="{ProductId}" text="{Name}" additionalText="{ProductId}"/>
@@ -124,7 +124,7 @@
 												<l:GridData span="L4 M5 S10"/>
 											</layoutData>
 										</Input>
-										<Label text="{i18n>request_order}" required="true"/>
+										<Label text="{i18n>request_order}"/>
 										<Input id="AUFNR" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 											<suggestionItems>
 												<core:ListItem key="{ProductId}" text="{Name}" additionalText="{ProductId}"/>
@@ -140,14 +140,14 @@
 								<f:SimpleForm id="ControlDataStatusForm" title="{i18n>status}" editable="true" layout="ResponsiveGridLayout" labelSpanXL="2" labelSpanL="3"
 									labelSpanM="3" labelSpanS="3" adjustLabelSpan="true" singleContainerFullSize="false" columnsL="1">
 									<f:content>
-										<Label text="{i18n>sys_stat}" required="true" class="sapMLabel" textDirection="LTR"/>
-										<Input id="sys_stat" value="{}"/>
+										<Label text="{i18n>sys_stat}" class="sapMLabel" textDirection="LTR"/>
+										<Input id="sys_stat" value=""/>
 										<Button id="release" text="Release" press="onRelease" width="100px"/>
-										<Label text="{i18n>user_stat}" required="true"/>
-										<Input id="user_stat" value="{}"/>
+										<Label text="{i18n>user_stat}"/>
+										<Input id="user_stat" value=""/>
 										<Button id="setreset" text="Set/Reset" press="onReset" width="100px"/>
-										<Label text="{i18n>stat_num}" required="true"/>
-										<Input id="stat_num" value="{}"/>
+										<Label text="{i18n>stat_num}"/>
+										<Input id="stat_num" value=""/>
 									</f:content>
 									<Button text="Allowed transacts." press="onAllowTransact" width="150px"/>
 								</f:SimpleForm>
@@ -163,7 +163,7 @@
 												<l:GridData span="L4 M5 S10"/>
 											</layoutData>
 										</Input>
-										<Label text="{i18n>order_cat}" required="true"/>
+										<Label text="{i18n>order_cat}"/>
 										<Input id="order_cat" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 											<suggestionItems>
 												<core:ListItem key="{ProductId}" text="{Name}" additionalText="{ProductId}"/>
@@ -172,7 +172,7 @@
 												<l:GridData span="L4 M5 S10"/>
 											</layoutData>
 										</Input>
-										<Label text="{i18n>act_post_cctr}" required="true"/>
+										<Label text="{i18n>act_post_cctr}"/>
 										<Input id="ACTPOSCCTR" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 											<suggestionItems>
 												<core:ListItem key="{ProductId}" text="{Name}" additionalText="{ProductId}"/>
@@ -192,7 +192,7 @@
 								<f:SimpleForm id="PeriodEndForm" title="{i18n>period_end_close}" editable="true" layout="ResponsiveGridLayout" labelSpanXL="2"
 									labelSpanL="3" labelSpanM="4" labelSpanS="3" adjustLabelSpan="true" singleContainerFullSize="false">
 									<f:content>
-										<Label text="{i18n>resul_analy_key}" required="true" class="sapMLabel" textDirection="LTR"/>
+										<Label text="{i18n>resul_analy_key}" class="sapMLabel" textDirection="LTR"/>
 										<Input id="ABGSL" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 											<suggestionItems>
 												<core:ListItem key="{ProductId}" text="{Name}" additionalText="{ProductId}"/>
@@ -201,7 +201,7 @@
 												<l:GridData span="L4 M5 S10"/>
 											</layoutData>
 										</Input>
-										<Label text="{i18n>costi_sheet}" required="true"/>
+										<Label text="{i18n>costi_sheet}"/>
 										<Input id="KALSM" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 											<suggestionItems>
 												<core:ListItem key="{ProductId}" text="{Name}" additionalText="{ProductId}"/>
@@ -210,7 +210,7 @@
 												<l:GridData span="L4 M5 S10"/>
 											</layoutData>
 										</Input>
-										<Label text="{i18n>overhead_key}" required="true"/>
+										<Label text="{i18n>overhead_key}"/>
 										<Input id="ZSCHL" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 											<suggestionItems>
 												<core:ListItem key="{ProductId}" text="{Name}" additionalText="{ProductId}"/>
@@ -219,7 +219,7 @@
 												<l:GridData span="L4 M5 S10"/>
 											</layoutData>
 										</Input>
-										<Label text="{i18n>interest_profile}" required="true"/>
+										<Label text="{i18n>interest_profile}"/>
 										<Input id="ZSCHM" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 											<suggestionItems>
 												<core:ListItem key="{ProductId}" text="{Name}" additionalText="{ProductId}"/>
@@ -233,7 +233,7 @@
 								<f:SimpleForm id="SettlementOneReceiver" title="{i18n>SettlementOneReceiver}" editable="true" layout="ResponsiveGridLayout" labelSpanXL="2"
 									labelSpanL="3" labelSpanM="4" labelSpanS="3" adjustLabelSpan="true" singleContainerFullSize="false">
 									<f:content>
-										<Label text="{i18n>settle_cost_elem}" required="true"/>
+										<Label text="{i18n>settle_cost_elem}"/>
 										<Input id="KSTAR" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 											<suggestionItems>
 												<core:ListItem key="{ProductId}" text="{Name}" additionalText="{ProductId}"/>
@@ -242,7 +242,7 @@
 												<l:GridData span="L4 M5 S10"/>
 											</layoutData>
 										</Input>
-										<Label text="{i18n>cost_center}" required="true"/>
+										<Label text="{i18n>cost_center}"/>
 										<Input id="COSTCENTER" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 											<suggestionItems>
 												<core:ListItem key="{ProductId}" text="{Name}" additionalText="{ProductId}"/>
@@ -251,7 +251,7 @@
 												<l:GridData span="L4 M5 S10"/>
 											</layoutData>
 										</Input>
-										<Label text="{i18n>glacc}" required="true"/>
+										<Label text="{i18n>glacc}"/>
 										<Input id="SAKNR" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 											<suggestionItems>
 												<core:ListItem key="{ProductId}" text="{Name}" additionalText="{ProductId}"/>
@@ -271,15 +271,15 @@
 										<f:content>
 											<core:Title text=""/>
 											<Label text="{i18n>applicant}"/>
-											<Input value="{SupplierName}"/>
+											<Input id="APPLICANT" value=""/>
 											<Label text="{i18n>tel}"/>
-											<Input value="{Street}" id="tel" type="Number" maxLength="10"/>
+											<Input value="" id="tel" type="Number" maxLength="10"/>
 											<Label text="{i18n>person_resp}"/>
-											<Input value="{ZIPCode}"/>
+											<Input id="ZIPCODE" value=""/>
 											<Label text="{i18n>tel}"/>
-											<Input value="{City}" id="tele" type="Number" maxLength="10"/>
+											<Input value="" id="tele" type="Number" maxLength="10"/>
 											<Label text="{i18n>est_cost}"/>
-											<Input value="{City}"/>
+											<Input id="CITY" value=""/>
 											<Label text="{i18n>proce_grp}"/>
 											<Input id="ABKRS" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 												<suggestionItems>
@@ -307,7 +307,7 @@
 								<f:SimpleForm id="InvestmentsForm" title="{i18n>invest_manage}" editable="true" layout="ResponsiveGridLayout" labelSpanXL="2" labelSpanL="3"
 									labelSpanM="3" labelSpanS="3" adjustLabelSpan="true" singleContainerFullSize="false">
 									<f:content>
-										<Label text="{i18n>invest_profile}" required="true" class="sapMLabel" textDirection="LTR"/>
+										<Label text="{i18n>invest_profile}" class="sapMLabel" textDirection="LTR"/>
 										<Input id="IVPRO" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 											<suggestionItems>
 												<core:ListItem key="{ProductId}" text="{Name}" additionalText="{ProductId}"/>
@@ -316,7 +316,7 @@
 												<l:GridData span="L4 M5 S10"/>
 											</layoutData>
 										</Input>
-										<Label text="{i18n>scale}" required="true"/>
+										<Label text="{i18n>scale}"/>
 										<Input id="SIZECL" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 											<suggestionItems>
 												<core:ListItem key="{ProductId}" text="{Name}" additionalText="{ProductId}"/>
@@ -325,7 +325,7 @@
 												<l:GridData span="L4 M5 S10"/>
 											</layoutData>
 										</Input>
-										<Label text="{i18n>invest_reason}" required="true"/>
+										<Label text="{i18n>invest_reason}"/>
 										<Input id="IZWEK" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 											<suggestionItems>
 												<core:ListItem key="{ProductId}" text="{Name}" additionalText="{ProductId}"/>
@@ -334,7 +334,7 @@
 												<l:GridData span="L4 M5 S10"/>
 											</layoutData>
 										</Input>
-										<Label text="{i18n>env_invest}" required="true"/>
+										<Label text="{i18n>env_invest}"/>
 										<Input id="UMWKZ" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 											<suggestionItems>
 												<core:ListItem key="{ProductId}" text="{Name}" additionalText="{ProductId}"/>
@@ -348,7 +348,7 @@
 								<f:SimpleForm id="AssignToInvestForm" title="{i18n>ass_to_inv}" editable="true" layout="ResponsiveGridLayout" labelSpanXL="2" labelSpanL="3"
 									labelSpanM="4" labelSpanS="3" adjustLabelSpan="true" singleContainerFullSize="false">
 									<f:content>
-										<Label text="{i18n>invest_prog}" required="true" class="sapMLabel" textDirection="LTR"/>
+										<Label text="{i18n>invest_prog}" class="sapMLabel" textDirection="LTR"/>
 										<Input id="PRNAM" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 											<suggestionItems>
 												<core:ListItem key="{ProductId}" text="{Name}" additionalText="{ProductId}"/>
@@ -357,7 +357,7 @@
 												<l:GridData span="L4 M5 S10"/>
 											</layoutData>
 										</Input>
-										<Label text="{i18n>pos_id}" required="true"/>
+										<Label text="{i18n>pos_id}"/>
 										<Input id="pos_id" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 											<suggestionItems>
 												<core:ListItem key="{ProductId}" text="{Name}" additionalText="{ProductId}"/>
@@ -371,7 +371,7 @@
 								<f:SimpleForm id="DepreciationForm" title="{i18n>dep_sim_data}" editable="true" layout="ResponsiveGridLayout" labelSpanXL="2" labelSpanL="3"
 									labelSpanM="3" labelSpanS="3" adjustLabelSpan="true" singleContainerFullSize="false">
 									<f:content>
-										<Label text="{i18n>asset_class}" required="true" class="sapMLabel" textDirection="LTR"/>
+										<Label text="{i18n>asset_class}" class="sapMLabel" textDirection="LTR"/>
 										<Input id="ANLKL" type="Text" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp">
 											<suggestionItems>
 												<core:ListItem key="{ProductId}" text="{Name}" additionalText="{ProductId}"/>
@@ -380,7 +380,7 @@
 												<l:GridData span="L4 M5 S10"/>
 											</layoutData>
 										</Input>
-										<Label text="{i18n>capital_date}" required="true"/>
+										<Label text="{i18n>capital_date}"/>
 										<DatePicker id="capdate" placeholder="Enter Date ..." change="handleChange" class="sapUiSmallMarginBottom"/>
 									</f:content>
 								</f:SimpleForm>
