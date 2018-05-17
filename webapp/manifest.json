@@ -43,7 +43,7 @@
 	},
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "InternalOrders.view.App",
+			"viewName": "InternalOrders.view.OrderType",
 			"type": "XML",
 			"id": "app"
 		},
@@ -85,27 +85,6 @@
 			"css": [{
 				"uri": "css/style.css"
 			}]
-		},
-		"routing": {
-			"config": {
-				"routerClass": "sap.m.routing.Router",
-				"viewType": "XML",
-				"viewPath": "InternalOrders.view",
-				"controlId": "app",
-				"controlAggregation": "pages"
-			},
-			"routes": [{
-				"pattern": "",
-				"name": "OrderType",
-				"target": "ordertype"
-			}],
-			"targets": {
-				"ordertype": {
-					"viewId": "ordertype",
-					"viewName": "OrderType",
-					"viewLevel": 1
-				}
-			}
 		}
 	}
 }

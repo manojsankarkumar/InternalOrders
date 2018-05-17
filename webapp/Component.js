@@ -32,7 +32,7 @@ sap.ui.define([
 			this.setModel(models.createDeviceModel(), "device");
 			
 			// create the views based on the url/hash
-			this.getRouter().initialize();
+		
 		}
 	});
 });
