@@ -9,12 +9,6 @@
 							adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
 							singleContainerFullSize="false">
 							<f:content>
-								<Label text="{i18n>order}"/>
-								<Input id="name" value="">
-									<layoutData>
-										<l:GridData span="L4 M5 S10"/>
-									</layoutData>
-								</Input>
 								<Label text="{i18n>order_type}"/>
 								<Input id="AUART" textFormatMode="KeyValue" showSuggestion="true" showValueHelp="true" valueHelpRequest="ValueHelp" valueLiveUpdate="true"
 									liveChange="orderTypeUpdate">
@@ -388,10 +382,10 @@
 						</items>
 					</IconTabBar>
 				</content>
-				<footer>
+				<footer id="foot">
 					<Bar>
 						<contentRight>
-							<Button id="btnCancel" press="HandleCancel" text="{i18n>cancel}" type="Reject" tooltip="Cancel"/>
+							<Button id="btnCancel" press="handleCancel" text="{i18n>cancel}" type="Reject" tooltip="Cancel"/>
 							<Button id="btnSave" press="handleSave" text="{i18n>save}" type="Emphasized" tooltip="Submits the data"/>
 						</contentRight>
 					</Bar>

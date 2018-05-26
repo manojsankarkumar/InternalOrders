@@ -45,11 +45,12 @@
     "blockPushLevel": "Error"
   },
   "build": {
-    "buildRequired": true,
+    "buildRequired": false,
     "sourceFolder": "webapp",
     "targetFolder": "dist",
     "excludedFolders": [],
-    "excludedFiles": []
+    "excludedFiles": [],
+    "lastBuildDateTime": "Sat, 26 May 2018 04:00:08 GMT"
   },
   "mockpreview": {
     "mockUri": "/sap/opu/odata/sap/Z_INTERNAL_ORDERS_SRV",
@@ -57,5 +58,10 @@
     "loadJSONFiles": false,
     "loadCustomRequests": false,
     "mockRequestsFilePath": ""
+  },
+  "hcpdeploy": {
+    "account": "p1941586745trial",
+    "name": "internalorders",
+    "lastVersionWeTriedToDeploy": "1.0.9"
   }
 }
